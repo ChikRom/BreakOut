@@ -1,0 +1,12 @@
+# Build output
+bin/
+x64/
+Debug/
+Release/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.log
+*.tlog
