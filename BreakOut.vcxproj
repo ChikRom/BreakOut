@@ -268,15 +268,26 @@ echo === GLSL validation completed ===</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\OpenGL\src\glad.c" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\resource_manager.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+    <ClCompile Include="src\sprite_renderer.cpp" />
+    <ClCompile Include="src\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shader.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\resource_manager.h" />
+    <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\sprite_renderer.h" />
+    <ClInclude Include="src\texture.h" />
+    <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\text.frag" />
-    <None Include="shaders\text.vert" />
+    <None Include="shaders\sprite.frag" />
+    <None Include="shaders\sprite.vert" />
+    <None Include="shaders\text.fragm" />
+    <None Include="shaders\text.vertx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
