@@ -4,6 +4,8 @@
 #include <GLAD/glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "game_level.h"
+
 enum GameState
 {
 	GAME_ACTIVE,
@@ -14,10 +16,13 @@ enum GameState
 class Game
 {
 public:
+	// levels
+	std::vector<GameLevel>	Levels;
+	unsigned int			Level;
 	// game state
-	GameState	 State;
-	bool		 Keys[1024];
-	unsigned int Width, Height;
+	GameState				State;
+	bool					Keys[1024];
+	unsigned int			Width, Height;
 	// constructor/destructor
 	Game(unsigned int width, unsigned int height);
 	~Game();

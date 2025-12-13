@@ -269,6 +269,8 @@ echo === GLSL validation completed ===</Command>
   <ItemGroup>
     <ClCompile Include="..\OpenGL\src\glad.c" />
     <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\game_level.cpp" />
+    <ClCompile Include="src\game_object.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\resource_manager.cpp" />
     <ClCompile Include="src\shader.cpp" />
@@ -277,6 +279,8 @@ echo === GLSL validation completed ===</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\game_level.h" />
+    <ClInclude Include="src\game_object.h" />
     <ClInclude Include="src\resource_manager.h" />
     <ClInclude Include="src\shader.h" />
     <ClInclude Include="src\sprite_renderer.h" />
@@ -284,6 +288,7 @@ echo === GLSL validation completed ===</Command>
     <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="levels\standard.lvl" />
     <None Include="shaders\sprite.frag" />
     <None Include="shaders\sprite.vert" />
     <None Include="shaders\text.fragm" />
