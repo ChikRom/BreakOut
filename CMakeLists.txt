@@ -35,7 +35,7 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
 else()
 	add_compile_definitions(NDEBUG)
 	add_compile_options(/O2)
-endif()¸
+endif()
 
 function(copy_resources)
     set(RESOURCE_DIRS
