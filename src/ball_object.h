@@ -10,8 +10,9 @@ class BallObject : public GameObject
 {
 public:
 	// ball state
-	float Radius;
-	bool Stuck;
+	float	Radius;
+	bool	Stuck;
+	bool	Sticky, PassThrough;
 	// constructor(s)
 	BallObject();
 	BallObject(glm::vec2 pos, glm::vec2 velocity, float radius, Texture2D sprite);

@@ -3,10 +3,8 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-
-
-
-
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 // Instantiate static variables
 std::map<std::string, Texture2D>	ResourceManager::Textures;
 std::map<std::string, Shader>		ResourceManager::Shaders;

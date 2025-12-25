@@ -5,7 +5,7 @@
 #include <GLFW/glfw3.h>
 #include "ball_object.h"
 #include "game_level.h"
-
+#include "power_up.h"
 // current state of the game
 enum GameState
 {
@@ -32,20 +32,23 @@ const glm::vec2 PLAYER_SIZE(200.0f, 50.0f);
 const float PLAYER_VELOCITY(1000.0f);
 
 // Initial radius of the Ball
-const float BALL_RADIUS = 25.0f;
+const float BALL_RADIUS = 40.0f;
 // Initial velocity of the Ball
-const glm::vec2 BALL_VELOCITY(300.0f, -950.0f);
+const glm::vec2 BALL_VELOCITY(0.0f, -950.0f);
 
 class Game
 {
 public:
 	// levels
 	std::vector<GameLevel>	Levels;
+	std::vector<PowerUP>	PowerUps;
 	unsigned int			Level;
 	// game state
 	GameState				State;
 	bool					Keys[1024];
+	bool					KeysProcessed[1024];
 	unsigned int			Width, Height;
+	unsigned int			Lives;
 	// constructor/destructor
 	Game(unsigned int width, unsigned int height);
 	~Game();
@@ -62,6 +65,9 @@ public:
 	// reset
 	void ResetLevel();
 	void ResetPlayer();
+	// powerups
+	void SpawnPowerUps(GameObject& block);
+	void UpdatePowerUps(float dt);
 };
 
 #endif GAME_H

@@ -3,7 +3,6 @@
 #include <map>
 #include <string>
 #include <GLAD/glad/glad.h>
-#include "stb_image.h"
 #include "texture.h"
 #include "shader.h"
 
